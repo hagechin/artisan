@@ -1,0 +1,74 @@
+name: Fuji Royal test builds
+
+on:
+  push:
+    branches: [fuji-royal-build-test]
+  workflow_dispatch:
+
+jobs:
+  mac-intel:
+    runs-on: macos-15-intel
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r src/requirements.txt
+      - name: Generate derived files and build
+        working-directory: src
+        env:
+          MACOSX_DEPLOYMENT_TARGET: '13.0'
+        run: |
+          export QT_PATH="$(python -c 'import PyQt6, pathlib; print(pathlib.Path(PyQt6.__file__).parent / "Qt6")')"
+          chmod +x build-derived.sh pylupdate6pro.py
+          ./build-derived.sh macos
+          python -m PyInstaller --noconfirm artisan-mac.spec
+          codesign --force --deep --sign - dist/artisan.app
+          codesign --verify --deep --strict dist/artisan.app
+          file dist/artisan.app/Contents/MacOS/artisan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artisan-fuji-royal-mac-intel
+          path: src/artisan-mac-*.dmg
+          if-no-files-found: error
+
+  windows-x64:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          architecture: x64
+      - name: Prepare Appveyor-compatible test build
+        shell: pwsh
+        run: |
+          $env:APPVEYOR = 'True'
+          $env:PYTHON_PATH = (python -c 'import sys; print(sys.prefix)')
+          $env:PYQT = '6'
+          $env:PYUIC = 'pyuic6.exe'
+          $env:PYINSTALLER_VER = '6.22.2'
+          $env:BUILD_PYINSTALLER = 'False'
+          $env:VC_REDIST = 'https://aka.ms/vc14/vc_redist.x64.exe'
+          $env:QT_TRANSL = "$env:PYTHON_PATH\Lib\site-packages\PyQt6\Qt6\translations"
+          $spec = 'src\artisan-win.spec'
+          $text = Get-Content $spec -Raw
+          $text = $text.Replace("ARTISAN_SRC = r'C:\projects\artisan\src'", "ARTISAN_SRC = os.path.abspath(os.getcwd())")
+          Set-Content $spec $text
+          cmd /c .ci\install-win.bat
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Push-Location src
+          try {
+            cmd /c build-win3-pi.bat
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          } finally { Pop-Location }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artisan-fuji-royal-windows-x64
+          path: src/artisan-win*setup.exe
+          if-no-files-found: error
