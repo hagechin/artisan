@@ -30,6 +30,11 @@ jobs:
           codesign --force --deep --sign - dist/artisan.app
           codesign --verify --deep --strict dist/artisan.app
           file dist/artisan.app/Contents/MacOS/artisan
+          dmg=$(find . -maxdepth 1 -name 'artisan-mac-*.dmg' -print -quit)
+          test -n "$dmg"
+          rm "$dmg"
+          hdiutil create -volname 'Artisan Fuji Royal Test' -srcfolder dist/artisan.app -format UDZO "$dmg"
+          hdiutil verify "$dmg"
       - uses: actions/upload-artifact@v4
         with:
           name: artisan-fuji-royal-mac-intel
