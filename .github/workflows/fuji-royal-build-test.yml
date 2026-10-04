@@ -40,6 +40,7 @@ jobs:
           name: artisan-fuji-royal-mac-intel
           path: src/artisan-mac-*.dmg
           if-no-files-found: error
+          retention-days: 1
 
   windows-x64:
     runs-on: windows-2022
@@ -77,3 +78,4 @@ jobs:
           name: artisan-fuji-royal-windows-x64
           path: src/artisan-win*setup.exe
           if-no-files-found: error
+          retention-days: 1
