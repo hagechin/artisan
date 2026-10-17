@@ -203,6 +203,7 @@ copy_file(r'..\vc_redist.x64.exe', TARGET)
 
 copy_file('README.txt',TARGET)
 copy_file(r'..\LICENSE', TARGET + r'\LICENSE.txt')
+copy_file(r'..\DISTRIBUTION-NOTICE.txt', TARGET + r'\DISTRIBUTION-NOTICE.txt')
 make_dir(TARGET + 'Wheels')
 make_dir(TARGET + r'Wheels\Cupping')
 make_dir(TARGET + r'Wheels\Other')

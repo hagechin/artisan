@@ -45,7 +45,7 @@ block_cipher = None
 
 # current version
 VERSION = artisanlib.__version__
-LICENSE = 'GNU General Public License (GPL)'
+LICENSE = 'Copyright 2010-2026 Artisan developers and contributors. h.coffee independent modifications 2026-10-04 and 2026-10-09. AGPL-3.0-or-later.'
 
 try:
     PYTHON_V = os.environ["PYTHON_V"]
@@ -238,6 +238,8 @@ subprocess.check_call(r'rm -rf dist/Test/_internal/babel/*',shell = True) # uncl
 subprocess.check_call(r'rm -rf dist/Test',shell = True)
 subprocess.check_call(r'cp README.txt dist',shell = True)
 subprocess.check_call(r'cp ../LICENSE dist/LICENSE.txt',shell = True)
+subprocess.check_call(r'cp ../LICENSE dist/artisan.app/Contents/Resources/LICENSE-AGPL-3.0.txt',shell = True)
+subprocess.check_call(r'cp ../DISTRIBUTION-NOTICE.txt dist/artisan.app/Contents/Resources/DISTRIBUTION-NOTICE.txt',shell = True)
 subprocess.check_call(r'mkdir -p dist/Wheels',shell = True)
 subprocess.check_call(r'mkdir -p dist/Wheels/Cupping',shell = True)
 subprocess.check_call(r'mkdir -p dist/Wheels/Other',shell = True)

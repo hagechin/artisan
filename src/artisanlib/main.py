@@ -24586,8 +24586,9 @@ class ApplicationWindow(QMainWindow):
                 f"""<center><h1>{name.lower()}</h1>v{__version__} {(__build__ if __build__ != '0' else '')}{(f' ({str(__revision__)})' if str(__revision__) != '' else '')}
                 <i>{('' if not appFrozen() or self.official_build else QApplication.translate('Message', 'unoffical build'))}</i></center>
                 <p><center><a href="https://artisan-scope.org">https://artisan-scope.org</a></center><br></p>
+                <p><b>h.coffee independent modified build</b><br><small>Modified 2026-10-04 and 2026-10-09: Fuji Royal COFFEE DISCOVERY ACS-13A/CMA support and Roasting Compass CSV migration. This is not an official Artisan release. Source and build instructions: <a href="https://github.com/hagechin/artisan">hagechin/artisan</a>.</small></p>
                 <p><b>{QApplication.translate('About', 'Core Developers')}</b><small>{coredevelopers}</small></p>
-                <p><b>{QApplication.translate('About', 'License')}</b><br><small><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License (AGPLv3.0)</a></small></p><br>
+                <p><b>{QApplication.translate('About', 'License')}</b><br><small><a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License (AGPLv3.0 or later)</a>. Original Artisan copyright remains with its developers and contributors. No warranty. See the bundled LICENSE-AGPL-3.0.txt (Mac) or LICENSE.txt (Windows), DISTRIBUTION-NOTICE.txt, and third-party license texts for details.</small></p><br>
                 """)
         #box.setIconPixmap(QPixmap(os.path.join(getResourcePath(),'Icons','plus-connected.svg')))
         box.setWindowTitle(QApplication.translate('About', 'About'))
