@@ -198,7 +198,7 @@ with open('Info.plist', 'rb') as infile:
     plist = plistlib.load(infile)
     plist.update({ 'CFBundleDisplayName': 'artisan',
                     'CFBundleGetInfoString': 'artisan scope',
-                    'CFBundleIdentifier': 'org.artisan-scope.artisan',
+                    'CFBundleIdentifier': 'jp.hatte.artisan',
                     'CFBundleShortVersionString': VERSION,
                     'CFBundleVersion': 'artisan ' + VERSION,
                     'LSMinimumSystemVersion': minimumSystemVersion,
@@ -228,7 +228,7 @@ if not onefile:
 app = BUNDLE(bundle_obj,
           name='artisan.app',
           icon='artisan.icns',
-          bundle_identifier='org.artisan-scope.artisan',
+          bundle_identifier='jp.hatte.artisan',
           info_plist=plist)
 
 #------

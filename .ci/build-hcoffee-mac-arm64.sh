@@ -28,6 +28,7 @@ Path('artisan-mac-hcoffee-arm64.spec').write_text(source)
 PY
 python -m PyInstaller --clean --noconfirm "$SPEC"
 APP=dist/artisan.app
+test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Contents/Info.plist")" = 'jp.hatte.artisan'
 test -f "$APP/Contents/Resources/LICENSE-AGPL-3.0.txt"
 test -f "$APP/Contents/Resources/DISTRIBUTION-NOTICE.txt"
 {

@@ -112,7 +112,7 @@
 	<key>CFBundleIconFile</key>
 	<string>artisan.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.artisan-scope.artisan</string>
+	<string>jp.hatte.artisan</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
