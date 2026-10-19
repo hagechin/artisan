@@ -1,9 +1,10 @@
 h.coffee independent modified build of Artisan 4.2.1
 
 This is not an official Artisan project release. h.coffee modified Artisan on
-2026-10-04 and 2026-10-09 to support the Fuji Royal COFFEE DISCOVERY ACS-13A/CMA
-connection and Roasting Compass CSV import/conversion. The original Artisan
-copyright remains with its developers and contributors.
+2026-10-04, 2026-10-09, and 2026-10-19 to support the Fuji Royal COFFEE
+DISCOVERY ACS-13A/CMA connection and Roasting Compass CSV import/conversion,
+and to prepare this independent distribution. The original Artisan copyright
+remains with its developers and contributors.
 
 The modifications are available under the GNU Affero General Public License,
 version 3 or later, like the original Artisan source. See LICENSE.txt (Windows)
