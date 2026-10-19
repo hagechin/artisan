@@ -33,6 +33,7 @@ python "$ROOT/.ci/collect-hcoffee-python-licenses.py" "$APP/Contents/Resources/T
 cp "$ROOT/distribution/PYTHON-LICENSE.txt" "$APP/Contents/Resources/THIRD-PARTY-LICENSES/PYTHON-LICENSE.txt"
 cp -R "$ROOT/distribution/asset-licenses" "$APP/Contents/Resources/THIRD-PARTY-LICENSES/assets"
 cp -R "$ROOT/distribution/native-licenses" "$APP/Contents/Resources/THIRD-PARTY-LICENSES/native"
+cp "$ROOT/distribution/native-licenses/README-intel.md" "$APP/Contents/Resources/THIRD-PARTY-LICENSES/native/README.md"
 {
   printf 'Source commit: %s\n' "$(git -C "$ROOT" rev-parse HEAD)"
   printf 'Uncommitted source changes: %s\n' "$([[ -n "$SOURCE_STATUS" ]] && echo yes || echo no)"

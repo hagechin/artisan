@@ -1,6 +1,6 @@
 # Bundled fonts and JavaScript
 
-This directory accompanies the h.coffee Apple Silicon build. The license text for the bundled Python distributions and Python runtime is in the parent `THIRD-PARTY-LICENSES` directory. Original Artisan copyright and the AGPL are preserved elsewhere in the application bundle.
+This directory accompanies the h.coffee macOS builds. The license text for the bundled Python distributions and Python runtime is in the parent `THIRD-PARTY-LICENSES` directory. Original Artisan copyright and the AGPL are preserved elsewhere in the application bundle.
 
 | Bundled files | Attribution and license text |
 | --- | --- |
