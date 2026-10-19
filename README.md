@@ -40,7 +40,11 @@ If you think artisan scope is useful to you, contribute financially to its furth
 
 ![](https://github.com/artisan-roaster-scope/artisan/blob/master/wiki/screenshots/artisan-cover.png?raw=true)
 
-[Download](https://artisan-scope.org/download/) (macOS/Windows/Linux/RPi)
+Downloads
+---------
+
+- [h.coffee modified Artisan for Fuji Royal COFFEE DISCOVERY (Apple Silicon)](https://github.com/hagechin/artisan/releases/tag/hcoffee-4.2.1-20261019-arm64). This independent, notarized pre-release supports an ACS-13A controller connected through CMA USB and Roasting Compass CSV import. It is not an official Artisan release; see the release notes for tested hardware and source code.
+- [Official Artisan downloads](https://artisan-scope.org/download/) (macOS/Windows/Linux/RPi).
 
 [Installation Instructions](https://github.com/artisan-roaster-scope/artisan/blob/master/wiki/Installation.md)
 
