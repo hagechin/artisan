@@ -41,17 +41,11 @@
          };
       </script>
       <style type='text/css'>
-         @font-face {
-         font-family: 'alarmclock';
-         src: url('alarmclock.eot?#iefix') format('embedded-opentype'),  url('alarmclock.woff') format('woff'), url('alarmclock.ttf')  format('truetype'), url('alarmclock.svg#alarmclock') format('svg');
-         font-weight: normal;
-         font-style: normal;
-         }
          html {
          -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
          }
          body,html { 
-         font-family: 'alarmclock' !important; 
+         font-family: ui-monospace, monospace !important;
          background-color:#EEEEEE; 
          margin: 0 !important;
          padding: 0 !important;

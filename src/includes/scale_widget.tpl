@@ -43,34 +43,6 @@ Receives data in the shape of
         </div>
     </noscript>
 
-    <!-- load local fonts  -->
-    <style type='text/css'>
-        /* roboto-300 */
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 300;
-            font-stretch: 100%;
-            src: url('roboto-300.woff2') format('woff2');
-        }
-
-        /* roboto-regular */
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            src: url('roboto-regular.woff2') format('woff2');
-        }
-
-        /* roboto-600 */
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 600;
-            src: url('roboto-600.woff2') format('woff2');
-        }
-    </style>
-
     <script type="text/javascript" src="fitty_patched.js"></script>
     <script type="text/javascript">
         // @ts-check
@@ -847,7 +819,7 @@ Receives data in the shape of
             width: 100%;
             height: 100%;
             position: relative;
-            font-family: 'Roboto', sans-serif;
+            font-family: system-ui, sans-serif;
         }
 
         .noscriptmsg {

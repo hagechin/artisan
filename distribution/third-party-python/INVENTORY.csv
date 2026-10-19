@@ -1,0 +1,96 @@
+Package,Version,Metadata license,Collected license files
+aiohappyeyeballs,2.7.1,PSF-2.0,aiohappyeyeballs-2.7.1/licenses/LICENSE
+aiohttp,3.14.3,Apache-2.0 AND MIT,aiohttp-3.14.3/licenses/LICENSE.txt; aiohttp-3.14.3/licenses/vendor/llhttp/LICENSE
+aiohttp-jinja2,1.6,Apache 2,aiohttp-jinja2-1.6/LICENSE
+aiohttp-retry,2.9.1,MIT,aiohttp-retry-2.9.1/AUTHORS; aiohttp-retry-2.9.1/LICENSE
+aiosignal,1.4.0,Apache 2.0,aiosignal-1.4.0/licenses/LICENSE
+altgraph,0.17.5,MIT,altgraph-0.17.5/LICENSE
+annotated-types,0.8.0,MIT,annotated-types-0.8.0/licenses/LICENSE
+appnope,0.1.4,BSD,appnope-0.1.4/LICENSE
+arabic-reshaper,3.0.1,MIT,arabic-reshaper-3.0.1/licenses/LICENSE
+attrs,26.1.0,MIT,attrs-26.1.0/licenses/LICENSE
+babel,2.18.0,BSD-3-Clause,babel-2.18.0/licenses/LICENSE
+bleak,3.0.2,MIT,bleak-3.0.2/licenses/LICENSE
+certifi,2026.7.22,MPL-2.0,certifi-2026.7.22/licenses/LICENSE
+cffi,2.1.1,MIT-0,cffi-2.1.1/licenses/LICENSE
+charset-normalizer,3.5.2,MIT,charset-normalizer-3.5.2/licenses/LICENSE
+click,8.5.0,BSD-3-Clause,click-8.5.0/licenses/LICENSE.txt
+colorspacious,1.1.2,MIT,colorspacious-1.1.2/upstream-source-license/00-LICENSE.txt
+contourpy,1.4.0,BSD-3-Clause,contourpy-1.4.0/licenses/LICENSE
+cryptography,48.0.1,Apache-2.0 OR BSD-3-Clause,cryptography-48.0.1/licenses/LICENSE; cryptography-48.0.1/licenses/LICENSE.APACHE; cryptography-48.0.1/licenses/LICENSE.BSD
+cycler,0.12.1,"Copyright (c) 2015, matplotlib project [full text in metadata]",cycler-0.12.1/LICENSE
+et_xmlfile,2.0.0,MIT,et_xmlfile-2.0.0/AUTHORS.txt; et_xmlfile-2.0.0/LICENCE.python; et_xmlfile-2.0.0/LICENCE.rst
+fonttools,4.66.1,MIT,fonttools-4.66.1/licenses/LICENSE; fonttools-4.66.1/licenses/LICENSE.external
+frozenlist,1.8.0,Apache-2.0,frozenlist-1.8.0/licenses/LICENSE
+idna,3.20,BSD-3-Clause,idna-3.20/licenses/LICENSE.md
+iniconfig,2.3.0,MIT,iniconfig-2.3.0/licenses/LICENSE
+jaraco.classes,3.4.0,,jaraco.classes-3.4.0/LICENSE
+jaraco.context,6.1.2,MIT,jaraco.context-6.1.2/licenses/LICENSE
+jaraco.functools,4.6.0,MIT,jaraco.functools-4.6.0/licenses/LICENSE
+Jinja2,3.1.6,,Jinja2-3.1.6/licenses/LICENSE.txt
+jmespath,1.1.0,MIT,jmespath-1.1.0/LICENSE
+keyring,25.7.0,MIT,keyring-25.7.0/licenses/LICENSE
+kiwisolver,1.5.1,========================= [full text in metadata],kiwisolver-1.5.1/licenses/LICENSE
+lxml,6.1.1,BSD-3-Clause,lxml-6.1.1/licenses/LICENSE.txt; lxml-6.1.1/licenses/LICENSES.txt
+macholib,1.16.4,MIT,macholib-1.16.4/LICENSE
+MarkupSafe,3.0.4,BSD-3-Clause,MarkupSafe-3.0.4/licenses/LICENSE.txt
+matplotlib,3.11.1,License agreement for matplotlib versions 1.3.0 and later [full text in metadata],matplotlib-3.11.1/LICENSE
+more-itertools,11.1.0,MIT,more-itertools-11.1.0/licenses/LICENSE
+multidict,6.9.1,Apache License 2.0,multidict-6.9.1/licenses/LICENSE
+numpy,2.5.2,BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0,numpy-2.5.2/licenses/LICENSE.txt; numpy-2.5.2/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt; numpy-2.5.2/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING; numpy-2.5.2/licenses/numpy/_core/src/highway/LICENSE; numpy-2.5.2/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt; numpy-2.5.2/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md; numpy-2.5.2/licenses/numpy/_core/src/umath/svml/LICENSE; numpy-2.5.2/licenses/numpy/fft/pocketfft/LICENSE.md; numpy-2.5.2/licenses/numpy/linalg/lapack_lite/LICENSE.txt; numpy-2.5.2/licenses/numpy/ma/LICENSE; numpy-2.5.2/licenses/numpy/random/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/distributions/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/mt19937/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/pcg64/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/philox/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/sfc64/LICENSE.md; numpy-2.5.2/licenses/numpy/random/src/splitmix64/LICENSE.md
+openpyxl,3.1.5,MIT,openpyxl-3.1.5/LICENCE.rst
+packaging,26.3,Apache-2.0 OR BSD-2-Clause,packaging-26.3/licenses/LICENSE; packaging-26.3/licenses/LICENSE.APACHE; packaging-26.3/licenses/LICENSE.BSD
+paho-mqtt,2.1.0,EPL-2.0 OR BSD-3-Clause,paho-mqtt-2.1.0/licenses/LICENSE.txt
+persist-queue,1.1.0,BSD,persist-queue-1.1.0/licenses/LICENSE
+phidget22,1.25.20260408,BSD-3-Clause,phidget22-1.25.20260408/LICENSE
+pillow,12.3.0,MIT-CMU,pillow-12.3.0/licenses/LICENSE
+pip,25.3,MIT,pip-25.3/licenses/AUTHORS.txt; pip-25.3/licenses/LICENSE.txt; pip-25.3/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt; pip-25.3/licenses/src/pip/_vendor/certifi/LICENSE; pip-25.3/licenses/src/pip/_vendor/dependency_groups/LICENSE.txt; pip-25.3/licenses/src/pip/_vendor/distlib/LICENSE.txt; pip-25.3/licenses/src/pip/_vendor/distro/LICENSE; pip-25.3/licenses/src/pip/_vendor/idna/LICENSE.md; pip-25.3/licenses/src/pip/_vendor/msgpack/COPYING; pip-25.3/licenses/src/pip/_vendor/packaging/LICENSE; pip-25.3/licenses/src/pip/_vendor/packaging/LICENSE.APACHE; pip-25.3/licenses/src/pip/_vendor/packaging/LICENSE.BSD; pip-25.3/licenses/src/pip/_vendor/pkg_resources/LICENSE; pip-25.3/licenses/src/pip/_vendor/platformdirs/LICENSE; pip-25.3/licenses/src/pip/_vendor/pygments/LICENSE; pip-25.3/licenses/src/pip/_vendor/pyproject_hooks/LICENSE; pip-25.3/licenses/src/pip/_vendor/requests/LICENSE; pip-25.3/licenses/src/pip/_vendor/resolvelib/LICENSE; pip-25.3/licenses/src/pip/_vendor/rich/LICENSE; pip-25.3/licenses/src/pip/_vendor/tomli/LICENSE; pip-25.3/licenses/src/pip/_vendor/tomli_w/LICENSE; pip-25.3/licenses/src/pip/_vendor/truststore/LICENSE; pip-25.3/licenses/src/pip/_vendor/urllib3/LICENSE.txt
+pluggy,1.6.0,MIT,pluggy-1.6.0/licenses/LICENSE
+portalocker,4.1.0,BSD-3-Clause,portalocker-4.1.0/licenses/LICENSE
+prettytable,3.18.0,BSD-3-Clause,prettytable-3.18.0/licenses/LICENSE
+propcache,0.5.4,Apache-2.0,propcache-0.5.4/licenses/LICENSE; propcache-0.5.4/licenses/NOTICE
+protobuf,7.35.1,3-Clause BSD License,protobuf-7.35.1/LICENSE
+psutil,7.2.2,BSD-3-Clause,psutil-7.2.2/LICENSE
+pycparser,3.0,BSD-3-Clause,pycparser-3.0/licenses/LICENSE
+pydantic,2.13.4,MIT,pydantic-2.13.4/licenses/LICENSE
+pydantic_core,2.46.4,MIT,pydantic_core-2.46.4/licenses/LICENSE
+pyfulgur,0.40.0,MIT OR Apache-2.0,pyfulgur-0.40.0/upstream-source-license/LICENSE-APACHE; pyfulgur-0.40.0/upstream-source-license/LICENSE-MIT
+Pygments,2.21.0,BSD-2-Clause,Pygments-2.21.0/licenses/AUTHORS; Pygments-2.21.0/licenses/LICENSE
+pyinstaller,6.22.2,GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones),pyinstaller-6.22.2/licenses/COPYING.txt
+pyinstaller-hooks-contrib,2026.8,,pyinstaller-hooks-contrib-2026.8/licenses/LICENSE
+pymodbus,3.15.0,BSD-3-Clause,pymodbus-3.15.0/licenses/AUTHORS.rst; pymodbus-3.15.0/licenses/LICENSE
+pyobjc-core,12.2.2,MIT,pyobjc-core-12.2.2/upstream-source-license/00-License.txt; pyobjc-core-12.2.2/upstream-source-license/01-copying.m
+pyobjc-framework-Cocoa,12.2.2,MIT,pyobjc-framework-Cocoa-12.2.2/licenses/LICENSE.txt
+pyobjc-framework-CoreBluetooth,12.2.2,MIT,pyobjc-framework-CoreBluetooth-12.2.2/licenses/LICENSE.txt
+pyobjc-framework-libdispatch,12.2.2,MIT,pyobjc-framework-libdispatch-12.2.2/upstream-source-license/00-License.txt
+pyparsing,3.3.3,MIT,pyparsing-3.3.3/licenses/LICENSE
+PyQt6,6.11.0,GPL-3.0-only,PyQt6-6.11.0/licenses/LICENSE
+PyQt6-Qt6,6.11.2,LGPL v3,PyQt6-Qt6-6.11.2/LICENSE
+PyQt6_sip,13.12.0,BSD-2-Clause,PyQt6_sip-13.12.0/licenses/LICENSE
+pyserial,3.5,BSD,pyserial-3.5/upstream-source-license/00-LICENSE.txt
+pytest,9.1.1,MIT,pytest-9.1.1/licenses/LICENSE
+python-bidi,0.6.11,,python-bidi-0.6.11/licenses/AUTHORS.rst; python-bidi-0.6.11/licenses/COPYING; python-bidi-0.6.11/licenses/COPYING.LESSER; python-bidi-0.6.11/licenses/LICENSE-THIRD-PARTY.yml
+python-dateutil,2.9.0.post0,Dual License,python-dateutil-2.9.0.post0/LICENSE
+python-snap7,2.1.0,MIT,python-snap7-2.1.0/licenses/LICENSE
+python-statemachine,3.2.1,MIT License,python-statemachine-3.2.1/licenses/LICENSE
+pyusb,1.3.1,,pyusb-1.3.1/LICENSE
+qrcode,8.2,BSD,qrcode-8.2/LICENSE
+qt6-applications,6.5.0.2.3,LGPLv3,qt6-applications-6.5.0.2.3/COPYING
+qt6-tools,6.5.0.1.3,LGPLv3,qt6-tools-6.5.0.1.3/COPYING
+requests,2.34.2,Apache-2.0,requests-2.34.2/licenses/LICENSE; requests-2.34.2/licenses/NOTICE
+requests-file,3.0.1,Apache 2.0,requests-file-3.0.1/licenses/LICENSE
+ruff,0.16.10,MIT,ruff-0.16.10/licenses/LICENSE
+scipy,1.18.0,"Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers. [full text in metadata]",scipy-1.18.0/LICENSE.txt
+setuptools,84.0.0,MIT,setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/LICENSE; setuptools-84.0.0/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE.APACHE; setuptools-84.0.0/licenses/LICENSE.BSD; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE; setuptools-84.0.0/licenses/LICENSE.txt; setuptools-84.0.0/licenses/LICENSE
+six,1.17.0,MIT,six-1.17.0/LICENSE
+typing-inspection,0.4.4,MIT,typing-inspection-0.4.4/licenses/LICENSE
+typing_extensions,4.16.0,PSF-2.0,typing_extensions-4.16.0/licenses/LICENSE
+Unidecode,1.4.0,GPL,Unidecode-1.4.0/LICENSE
+urllib3,2.8.0,MIT,urllib3-2.8.0/licenses/LICENSE.txt
+wcwidth,0.9.1,,wcwidth-0.9.1/licenses/LICENSE
+websockets,17.0.1,BSD-3-Clause,websockets-17.0.1/licenses/LICENSE
+wheel,0.48.0,MIT,wheel-0.48.0/licenses/LICENSE.txt
+wquantiles,0.6,MIT,wquantiles-0.6/LICENSE
+xlrd,2.0.2,BSD,xlrd-2.0.2/LICENSE
+yarl,1.25.1,Apache-2.0,yarl-1.25.1/licenses/LICENSE; yarl-1.25.1/licenses/NOTICE
+yoctopuce,2.1.15391,License information [full text in metadata],yoctopuce-2.1.15391/licenses/LICENSE.txt

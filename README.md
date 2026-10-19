@@ -40,7 +40,15 @@ If you think artisan scope is useful to you, contribute financially to its furth
 
 ![](https://github.com/artisan-roaster-scope/artisan/blob/master/wiki/screenshots/artisan-cover.png?raw=true)
 
-[Download](https://artisan-scope.org/download/) (macOS/Windows/Linux/RPi)
+Downloads
+---------
+
+This fork also prepares an independent h.coffee build for the Fuji Royal COFFEE DISCOVERY with an ACS-13A controller and CMA USB connection. It adds live BT recording, configurable timer events, and Roasting Compass CSV import and conversion. This is **not an official Artisan release**; other Fuji Royal machines have not been verified.
+
+- [Download the h.coffee build](https://github.com/hagechin/artisan/releases) — Apple Silicon macOS release only; check the release notes for availability, source code, licenses, checksums, and signing status.
+- [Download official Artisan](https://artisan-scope.org/download/) — official macOS, Windows, Linux, and Raspberry Pi builds.
+
+The h.coffee release link will be announced when the distribution package is ready. Until then, use the official download above.
 
 [Installation Instructions](https://github.com/artisan-roaster-scope/artisan/blob/master/wiki/Installation.md)
 

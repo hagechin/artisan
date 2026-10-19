@@ -7357,6 +7357,16 @@ class ApplicationWindow(QMainWindow):
 
     def setFonts(self, redraw:bool = True) -> None:
         self.setUpdatesEnabled(False) # disable display updates on main application window until
+        optional_fonts = {
+            1: ('Humor-Sans.ttf', 11),
+            3: ('WenQuanYiZenHei-01.ttf', 4),
+            9: ('dijkstra.ttf', 11),
+            10: ('xkcd-script.ttf', 11),
+        }
+        if self.qmc.graphfont in optional_fonts:
+            font_file, replacement = optional_fonts[self.qmc.graphfont]
+            if not os.path.isfile(os.path.join(getResourcePath(), font_file)):
+                self.qmc.graphfont = replacement
         # try to select the right font for matplotlib according to the given locale and platform
         if self.qmc.graphfont == 0:
             try:
@@ -24592,7 +24602,12 @@ class ApplicationWindow(QMainWindow):
                 """)
         #box.setIconPixmap(QPixmap(os.path.join(getResourcePath(),'Icons','plus-connected.svg')))
         box.setWindowTitle(QApplication.translate('About', 'About'))
+        third_party_path = os.path.join(getResourcePath(), 'THIRD-PARTY-LICENSES')
+        third_party_button = (box.addButton('Third-party licenses', QMessageBox.ButtonRole.ActionRole)
+                              if os.path.isdir(third_party_path) else None)
         box.exec()
+        if third_party_button is not None and box.clickedButton() == third_party_button:
+            QDesktopServices.openUrl(QUrl.fromLocalFile(third_party_path))
 
 
     @pyqtSlot()
@@ -27622,9 +27637,14 @@ class ApplicationWindow(QMainWindow):
                     self.qmc.segmentresultsloc = self.qmc.segmentresultsloc_default
 
             if self.qmc.locale_str in {'ja', 'ko', 'zh_CN', 'zh_TW'}:
-                # monospace font with Chinese characters
-                self.set_mpl_fontproperties(getResourcePath() + 'WenQuanYiZenHeiMonoMedium.ttf')
-                fontfamily = 'WenQuanYi Zen Hei Mono'
+                cjk_font = {
+                    'ja': ('SourceHanSansJP-Regular.otf', 'Source Han Sans JP'),
+                    'ko': ('SourceHanSansKR-Regular.otf', 'Source Han Sans KR'),
+                    'zh_CN': ('SourceHanSansCN-Regular.otf', 'Source Han Sans CN'),
+                    'zh_TW': ('SourceHanSansTW-Regular.otf', 'Source Han Sans TW'),
+                }[self.qmc.locale_str]
+                self.set_mpl_fontproperties(os.path.join(getResourcePath(), cjk_font[0]))
+                fontfamily = cjk_font[1]
             else:
                 fontfamily = 'monospace'
 

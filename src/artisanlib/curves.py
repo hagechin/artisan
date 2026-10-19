@@ -30,6 +30,7 @@
 ##########################################################################
 
 import sys
+import os
 import platform
 import numpy
 import logging
@@ -42,14 +43,14 @@ if TYPE_CHECKING:
     from PyQt6.QtGui import QCloseEvent # pylint: disable=unused-import
 
 from artisanlib.util import (deltaLabelBigPrefix, deltaLabelPrefix, deltaLabelUTF8,
-                             stringtoseconds, stringfromseconds, toFloat, float2float)
+                             stringtoseconds, stringfromseconds, toFloat, float2float, getResourcePath)
 from artisanlib.dialogs import ArtisanDialog
 from artisanlib.widgets import MyQDoubleSpinBox
 from help import symbolic_help # pyright:ignore [attr-defined] # pylint: disable=no-name-in-module
 from artisanlib.canvas import Interp1dKind
 
 from PyQt6.QtCore import (Qt, pyqtSlot, QSettings, QRegularExpression, QTimer)
-from PyQt6.QtGui import (QColor, QIntValidator, QRegularExpressionValidator, QPixmap)
+from PyQt6.QtGui import (QColor, QIntValidator, QRegularExpressionValidator, QPixmap, QStandardItemModel)
 from PyQt6.QtWidgets import (QApplication, QWidget, QCheckBox, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
                              QPushButton, QSpinBox, QTabWidget, QComboBox, QDialogButtonBox, QGridLayout,
                              QGroupBox, QLayout, QMessageBox, QRadioButton, QStyleFactory, QHeaderView,
@@ -743,6 +744,25 @@ class CurvesDlg(ArtisanDialog):
                                       'Comic Neue',
                                       'Nunito',
                                       'Noto Sans Mono'])
+        font_model = self.GraphFont.model()
+        unavailable_fonts = {
+            index: replacement
+            for index, (filename, replacement) in {
+                1: ('Humor-Sans.ttf', 11),
+                3: ('WenQuanYiZenHei-01.ttf', 4),
+                9: ('dijkstra.ttf', 11),
+                10: ('xkcd-script.ttf', 11),
+            }.items()
+            if not os.path.isfile(os.path.join(getResourcePath(), filename))
+        }
+        if isinstance(font_model, QStandardItemModel):
+            for index in unavailable_fonts:
+                item = font_model.item(index)
+                if item is not None:
+                    item.setEnabled(False)
+                    self.GraphFont.setItemText(index, f'{item.text()} (unavailable)')
+        if self.aw.qmc.graphfont in unavailable_fonts:
+            self.aw.qmc.graphfont = unavailable_fonts[self.aw.qmc.graphfont]
         self.GraphFont.setCurrentIndex(self.aw.qmc.graphfont)
         self.GraphFont.currentIndexChanged.connect(self.changeGraphFont)
         graphLayout = QHBoxLayout()
