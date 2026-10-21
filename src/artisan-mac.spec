@@ -173,7 +173,7 @@ exe = EXE(pyz,
             argv_emulation=False, # False for GUI apps
             target_arch='x86_64', #'arm64', #'universal2',
             codesign_identity=None,
-            entitlements_file=None
+            entitlements_file='Artisan.entitlements'
             )
 
 try:

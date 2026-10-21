@@ -53,11 +53,13 @@ cp -R "$ROOT/distribution/native-licenses" "$APP/Contents/Resources/THIRD-PARTY-
   printf 'Build definition: .ci/build-hcoffee-mac-arm64.sh\n'
 } > "$APP/Contents/Resources/BUILD-SOURCE.txt"
 if [[ -n "${SIGNING_IDENTITY:-}" ]]; then
-  codesign --force --deep --options runtime --timestamp --sign "$SIGNING_IDENTITY" "$APP"
+  codesign --force --deep --options runtime --timestamp \
+    --entitlements "$ROOT/src/Artisan.entitlements" --sign "$SIGNING_IDENTITY" "$APP"
 else
-  codesign --force --deep --sign - "$APP"
+  codesign --force --deep --entitlements "$ROOT/src/Artisan.entitlements" --sign - "$APP"
 fi
 codesign --verify --deep --strict "$APP"
+codesign -d --entitlements - "$APP" | grep -q 'com.apple.security.cs.allow-unsigned-executable-memory'
 file "$APP/Contents/MacOS/artisan"
 ditto -c -k --sequesterRsrc --keepParent "$APP" "$OUTPUT_DIR/Artisan-hcoffee-mac-arm64-test.zip"
 unzip -t "$OUTPUT_DIR/Artisan-hcoffee-mac-arm64-test.zip" | tail -1

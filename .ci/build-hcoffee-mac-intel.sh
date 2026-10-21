@@ -43,8 +43,9 @@ cp "$ROOT/distribution/native-licenses/README-intel.md" "$APP/Contents/Resources
 
 # CI has no Developer ID private key. Sign the downloaded bundle on the local
 # signing Mac and notarize it only after inspecting the bundled dependencies.
-codesign --force --deep --sign - "$APP"
+codesign --force --deep --entitlements "$ROOT/src/Artisan.entitlements" --sign - "$APP"
 codesign --verify --deep --strict "$APP"
+codesign -d --entitlements - "$APP" | grep -q 'com.apple.security.cs.allow-unsigned-executable-memory'
 ditto -c -k --sequesterRsrc --keepParent "$APP" "$OUTPUT_DIR/Artisan-hcoffee-mac-intel-test.zip"
 unzip -t "$OUTPUT_DIR/Artisan-hcoffee-mac-intel-test.zip" | tail -1
 shasum -a 256 "$OUTPUT_DIR/Artisan-hcoffee-mac-intel-test.zip"
